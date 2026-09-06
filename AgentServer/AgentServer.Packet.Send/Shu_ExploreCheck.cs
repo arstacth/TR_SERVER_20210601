@@ -1,0 +1,26 @@
+using System.Collections.Generic;
+using AgentServer.Structuring.Opcode;
+using AgentServer.Structuring.Shu;
+using LocalCommons.Network;
+
+namespace AgentServer.Packet.Send
+{
+	public sealed class Shu_ExploreCheck : NetPacket
+	{
+		public Shu_ExploreCheck(List<ExploreInfo> infos, byte last)
+		{
+			ns.WriteOP(Opcodes.eServer_SHU_PROTOCOL);
+			ns.Write(15);
+			ns.Write(0);
+			ns.Write(infos.Count);
+			foreach (ExploreInfo info in infos)
+			{
+				ns.Write(info.zoneNum);
+				ns.Fill(7);
+				ns.Write(info.endDateTime);
+				ns.Write(info.characterItemID);
+			}
+			ns.Write(last);
+		}
+	}
+}

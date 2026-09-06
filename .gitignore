@@ -1,0 +1,19 @@
+# Visual Studio / MSBuild
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+[Dd]ebug/
+[Rr]elease/
+
+# Per-project build output (keep root packages\ DLLs referenced by the .csproj files)
+**/bin/
+**/obj/
+
+# Compiled server binaries (Release OutputPath)
+packages/compile/
+
+# Logs and local runtime junk
+*.log
+*.pdb

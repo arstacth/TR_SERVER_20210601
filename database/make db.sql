@@ -1,0 +1,2 @@
+CREATE DATABASE tr_game_db CHARACTER SET tis620 COLLATE tis620_thai_ci;
+CREATE DATABASE tr_game_db_log CHARACTER SET tis620 COLLATE tis620_thai_ci;
